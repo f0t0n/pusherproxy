@@ -9,8 +9,6 @@ app = Flask(__name__)
 app.config.from_object('app.config.ProductionConfig')
 app.config.from_envvar('PUSHER_PROXY_CONFIG')
 
-print app.config['PUSHER']
-
 
 @app.route('/pusher_auth', methods=['post', 'get'])
 def pusher_auth():

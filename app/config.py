@@ -4,10 +4,14 @@
 
 class Config(object):
     DEBUG = False
-
-
-class ProductionConfig(Config):
-    DEBUG = True
     PUSHER = dict(APP_ID='<PUSHER APP_ID>',
                   KEY='<PUSHER KEY>',
                   SECRET='<PUSHER SECRET>')
+
+
+class ProductionConfig(Config):
+    DEBUG = False
+
+
+class DevelopmentConfig(Config):
+    DEBUG = True
